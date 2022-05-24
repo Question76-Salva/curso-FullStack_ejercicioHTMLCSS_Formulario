@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FERRETERÍA EL TORNILLO FELÍZ</h1>        
+    </header>
+    <main>
+        <div>
+            <h2>Formulario de registro</h2>
+        </div>        
+        <form action="enviar.html" method="POST">
+            <div class="contenedor">
+                <fieldset class="contenido">
+                    <legend><strong>¿QUIÉN ERES?</strong></legend>
+                    <div>
+                        <div>
+                            <label for="nombre" class="obligatorio"><strong>Nombre</strong></label>
+                        </div>
+                        <div>
+                            <input type="text" id="nombre" name="nombre" placeholder="Introduzca nombre" title="Nombre" maxlength="20">
+                        </div>                        
+                    </div>
+                    <div>
+                        <div>
+                            <label for="apellidos" class="obligatorio"><strong>Apellidos</strong></label>
+                        </div>
+                        <div>
+                            <input type="text" id="apellidos" name="apellidos" placeholder="Introduzca apellidos" title="Apellidos" maxlength="50">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="correo" class="obligatorio"><strong>Correo electrónico</strong></label>
+                        </div>
+                        <div>
+                            <input type="mail" id="correo" name="correo" placeholder="Introduzca correo" title="Correo" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="contenido">
+                    <legend><strong>¿DE DÓNDE ERES?</strong></legend>
+                    <div>
+                        <div>
+                            <label for="ciudad"><strong>Ciudad</strong></label>
+                        </div>
+                        <div>
+                            <input type="text" id="ciudad" name="ciudad" placeholder="Introduzca ciudad" title="Ciudad">
+                        </div> 
+                    </div>
+                    <div>
+                        <div>
+                            <label for="cp"><strong>Código postal</strong></label>
+                        </div>
+                        <div>
+                            <input type="text" id="cp" name="cp" placeholder="Introduzca código" title="Código Postal" maxlength="5" pattern="/^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/">
+                        </div> 
+                    </div>
+                    <div>
+                        <div>
+                            <label for="pais"><strong>País</strong></label>
+                        </div>
+                        <select name="pais" id="pais">                            
+                            <option value="esp">España</option>
+                            <option value="por">Portugal</option>
+                            <option value="and">Andorra</option>
+                            <option value="fra">Francia</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="contenido">
+                    <legend><strong>¿CÓMO QUIERES INICIAR SESIÓN?</strong></legend>
+                    <div>
+                        <div>
+                            <label for="usuario" class="obligatorio"><strong>Nombre de usuario</strong></label>
+                        </div>
+                        <div>
+                            <input type="text" id="usuario" name="usuario" placeholder="Introduzca usuario" title="Usuario" pattern="^[a-z0-9_-]{3,15}$">
+                        </div>
+                        <div>
+                            <label for="usuarioPass" class="obligatorio"><strong>Contraseña</strong></label>
+                        </div>
+                        <div>
+                            <input type="password" title="Contraseña" id="usuarioPass" name="password" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+                        </div>
+                        <div>
+                            <label for="confirmarPassword" class="obligatorio"><strong>Confirmar contraseña</strong></label>
+                        </div>
+                        <div>
+                            <input type="password" id="usuarioPassConfirm" name="usuarioPassConfirm" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+">
+                        </div>
+                    </div>
+                </fieldset>    
+                
+                <fieldset class="contenidoAbajo">
+                    <legend><strong>CONDICIONES DE REGISTRO</strong></legend>
+                        <div>
+                            <p><strong>Deseo recibir ofertas de FERRETERÍA EL TORNILLO FELÍZ</strong></p>
+                        </div>
+                        <div>
+                            <label for="dia">Una vez al dia</label>
+                            <input type="radio" id="dia" name="publicidad" value="dia">                        
+                            <label for="semana">Una vez a la semana</label>
+                            <input type="radio" id="semana" name="publicidad">                        
+                            <label for="dia">Una vez al mes</label>
+                            <input type="radio" id="mes" name="publicidad">                      
+                        </div>
+                        <div>
+                            <input type="checkbox" id="acpeto" name="acepto">
+                            <label for="acepto"><strong>Acepto el acuerdo de servicios, la declaración de privacidad y la declaración de uso de cookies</strong></label>
+                        </div>
+                </fieldset>                  
+                <div class="btn">
+                    <input type="submit" value="Crear cuenta" id="btnCrear">
+                    <input type="reset" value="Limpiar" id="btnLimpiar">
+                </div>
+            </div>                     
+        </form>
+    </main>
+</body>
+</html>

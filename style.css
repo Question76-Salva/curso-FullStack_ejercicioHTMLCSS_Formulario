@@ -1,0 +1,91 @@
+body {
+    /* Aquí el origen de la imagen */
+    background-image: url(https://img.freepik.com/foto-gratis/textura-tablas-madera_1249-169.jpg?w=2000);
+
+    /* Fijar la imagen de fondo este vertical y
+    horizontalmente y centrado */
+    background-position: center center;
+
+    /* Esta imagen no debe de repetirse */
+    background-repeat: no-repeat;
+
+    /* COn esta regla fijamos la imagen en la pantalla. */
+    background-attachment: fixed;
+
+    /* La imagen ocupa el 100% y se reescala */
+    background-size: cover;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    color: Navy;
+    text-shadow: 1px 2px 4px rgba(25, 136, 247, 0.8);    
+    font-weight: 900;    
+}
+
+h2 {
+    text-align: center;
+    color: Navy;
+    text-shadow: 1px 2px 4px rgba(25, 136, 247, 0.8);    
+    font-weight: 500;    
+}
+
+.contenedor {
+    margin-left: 1%;
+}
+
+.contenedor fieldset {
+    display: inline;
+}
+
+fieldset {
+    border: 2px solid tomato;
+    background-color: aquamarine;
+    opacity: .7;
+    box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.23);
+}
+
+fieldset legend {
+    color: black;
+    text-shadow: 1px 2px 4px rgba(25, 136, 247, 0.8); 
+}
+
+fieldset legend:hover {
+    color: white;
+    opacity: .9;
+    text-shadow: 1px 2px 4px rgba(25, 136, 247, 0.8);
+}
+
+.contenido {
+    width: 30%;
+}
+
+fieldset.contenidoAbajo {
+    width: 95.5%;
+}
+
+.obligatorio::after {
+    content:url(./img/asterisco.png);
+}
+
+.btn {
+    text-align: center;
+}
+
+.btn input {
+    padding: .5% .5%;
+    font-size: bold;
+    margin-top: 1%;  
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);      
+}
+
+.btn input:hover {
+    color: whitesmoke;
+    background-color: tomato;
+}
